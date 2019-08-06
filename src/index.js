@@ -1,6 +1,9 @@
 
 const grpc = require('grpc');
-const notesProto = require("@grpc/proto-loader").load('./protofiles/notes.proto');
+console.log(process.cwd()+'/protofiles/notes.proto')
+
+
+const notesProto = grpc.load(process.cwd()+'/protofiles/notes.proto');
 
 const notes = [
     { id: '1', title: 'Note 1', content: 'Content 1'},
